@@ -45,8 +45,37 @@
       </div>
     </nav>
 
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="input-group mb-3">
+              <select class="form-select" id="search-type">
+                <option value="nothing">Select an option</option>
+                <option value="location">Search by location</option>
+                <option value="park-type">Search by park type</option>
+              </select>
+              <select class="form-select" id="search-term">
+                <option value="">Select a search term</option>
+              </select>
+              <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-outline-secondary" type="button" id="button-refresh">Refresh Results</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="search-results" class="md-3 container"></div>
 
     <footer class="text-center m-3">Greater Outdoors ©</footer>
+
+
+    <script src="./scripts/nationalParkData.js"></script>
 
 
     <script
