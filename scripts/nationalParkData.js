@@ -5893,8 +5893,8 @@ const searchButton = document.querySelector("#button-search");
 const refreshButton = document.querySelector("#button-refresh");
 const searchResultsDiv = document.querySelector("#search-results");
 
-function searchByLocation(state) {
-  return nationalParksArray.filter((park) => park.State === state);
+function searchByLocation(location) {
+  return nationalParksArray.filter((park) => park.State === location);
 }
 
 function searchByParkType(parkType) {
@@ -5935,7 +5935,7 @@ searchButton.addEventListener("click", () => {
   } else {
     results.forEach((park) => {
       searchResultsDiv.innerHTML += `
-                <div class="card mb-3">
+                <div class="card m-3">
                     <div class="card-body">
                         <h5 class="card-title">${park.LocationName}</h5>
                         <p class="card-text">${park.Address}, ${park.City}, ${

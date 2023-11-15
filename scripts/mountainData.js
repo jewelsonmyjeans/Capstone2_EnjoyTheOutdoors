@@ -528,3 +528,27 @@ const mountainsArray = [
         }
     }
 ]
+
+const mountainSelect = document.querySelector('#mountain-select');
+const showResults = document.querySelector('#show-results');
+
+mountainsArray.forEach((mountain) => {
+    const option = document.createElement('option');
+    option.value = mountain.name;
+    option.innerHTML = mountain.name;
+    mountainSelect.appendChild(option);
+});
+
+mountainSelect.addEventListener('change', (e) => {
+    const selectedMountain = mountainsArray.find((mountain) => mountain.name === e.target.value);
+
+    const mountainHTML = `
+        <h2 class="mountain-name">${selectedMountain.name}</h2>
+        <img src="./images/${selectedMountain.img}" alt="${selectedMountain.name}" class="mountain-img">
+        <p class="mountain-elevation">Elevation: ${selectedMountain.elevation} ft</p>
+        <p class="mountain-desc text-wrap">Description: ${selectedMountain.desc}</p>
+        <p class="mountain-coords">Coordinates: ${selectedMountain.coords.lat}, ${selectedMountain.coords.lng}</p>
+    `;
+
+    showResults.innerHTML = mountainHTML;
+});
