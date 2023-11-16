@@ -5945,7 +5945,7 @@ searchButton.addEventListener("click", () => {
                         <p class="card-text">Fax: ${park.Fax}</p>
                         <a href="${
                           park.Visit
-                        }" class="card-link">Visit Website</a>
+                        }" class="card-link" target="_blank">Visit Website</a>
                     </div>
                 </div>
             `;
