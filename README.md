@@ -1,5 +1,8 @@
 # Capstone2_EnjoyTheOutdoors
 
+## Live Preview
+Click [here](https://jewelsonmyjeans.github.io/Capstone2_EnjoyTheOutdoors/) for a live preview of the project.
+
 ## Project Description
 
 This project is a web application that helps users find national parks and mountains. Users can search for activities based on location or park type. They can also click on a mountain using a dropdown and it will display all information about that mountain for them.
